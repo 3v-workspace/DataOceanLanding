@@ -326,7 +326,7 @@ $.ajax({
         
         $('.js-subscription-select').on('click', function () {
             const subId = $(this).data('id')
-            window.open(process.env.DO_FRONTEND_HOST + '/system/subscriptions/?lang=' + localStorage.getItem('lang') + `?subscription=${subId}`); 
+            window.open(process.env.DO_FRONTEND_HOST + '/system/subscriptions/?lang=' + localStorage.getItem('lang') + `&subscription=${subId}`); 
         });
     }
   });
