@@ -8,7 +8,7 @@
     font-family: $font-family-base;
     font-weight: 600;
     outline: none;
-    
+
     &_color-1 {
         background-color: $primary-1;
     }
@@ -119,7 +119,7 @@
         ion-icon {
             font-size: 30px;
         }
-    } 
+    }
 }
 
 .btn-secondary {
@@ -235,6 +235,11 @@
 .menu-btn {
     display: none;
     text-align: right;
+}
+
+.btn-for-pay {
+    width: 165px;
+    height: 48px;
 }
 
 @media screen and (max-width: $sm) {
