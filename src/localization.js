@@ -83,6 +83,10 @@ let langs = {
     dataNoCorrect: {
         uk: 'Будь ласка, заповніть поле коректно',
         en: 'Please fill in the field correct',
+    },
+    invalidLoginOrPassword: {
+        uk: 'Невірний логін або пароль',
+        en: 'Invalid login or password',
     }
 };
 
