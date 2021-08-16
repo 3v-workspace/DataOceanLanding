@@ -115,7 +115,7 @@ $(() => {
     //         }
     //     }
     // });
-    
+
     // $('.login .submenu').on('mouseleave', function (e) {
     //     if (e.target === e.currentTarget) {
     //         if ($(window).width() > 768) {
@@ -198,11 +198,12 @@ $('#loginform').on('submit', function(event){
             if (xhr.status !== 200) {
                 return
             }
+            cookie.set('pt', data.project_token);
             cookie.set('token', data.key);
             cookie.set('firstname', data.user.first_name);
             cookie.set('lastname', data.user.last_name);
             cookie.set('email', data.user.email);
-            cookie.set('lang', data.user.language)
+            cookie.set('lang', data.user.language);
             document.location = process.env.DO_FRONTEND_HOST + '/system/home/';
         },
         error: function (jqXHR, textStatus, errorMessage) {
