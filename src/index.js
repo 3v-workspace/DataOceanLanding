@@ -155,22 +155,22 @@ const getLoginSchema = () => {
                 required: true,
                 email: true,
             },
-            passwordLogin: {
-                minlength: 8,
-                maxlength: 128,
-                required: true,
-            },
+            // passwordLogin: {
+                // minlength: 8,
+                // maxlength: 128,
+                // required: true,
+            // },
         },
         messages: {
             emailLogin: {
                 required: t('emailRequired'),
                 email: t('emailCorrect'),
             },
-            passwordLogin: {
-                minlength: t('minSymbols'),
-                maxlength: t('maxSymbols'),
-                required: t('passwordRequired'),
-            }
+            // passwordLogin: {
+                // minlength: t('minSymbols'),
+                // maxlength: t('maxSymbols'),
+                // required: t('passwordRequired'),
+            // }
         }
     }
 };
@@ -206,10 +206,10 @@ $('#loginform').on('submit', function(event){
             cookie.set('lang', data.user.language);
             document.location = process.env.DO_FRONTEND_HOST + '/system/home/';
         },
-        error: function (jqXHR, textStatus, errorMessage) {
-            const key = Object.keys(jqXHR.responseJSON)[0];
-            const keyMessage = Object.values(jqXHR.responseJSON)[0][0];
-            key === 'non_field_errors' ? $('#error_login').html(t('invalidLoginOrPassword')) : $('#error_login').html(`${key}: ${keyMessage}`);
+        error: function() {
+            $('#error_login').html(t('invalidLoginOrPassword'))
+            // const key = Object.keys(jqXHR.responseJSON)[0];
+            // const keyMessage = Object.values(jqXHR.responseJSON)[0][0];
         }
     })
 })
